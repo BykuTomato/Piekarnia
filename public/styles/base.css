@@ -1,0 +1,67 @@
+html {
+  --color-gold-100: rgba(252, 222, 164, 0.719);
+  --color-gold-200: rgb(192, 136, 30);
+  --color-gold-300: rgb(146, 103, 23);
+
+
+  --color-brown-200: rgb(91, 57, 55);
+
+  font-family: 'Cormorant Infant', serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#nav-items-small {
+  display: none;
+}
+
+#nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 2rem auto;
+  padding: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#nav-items .item {
+  width: 12rem;
+  height: 2rem;
+  text-align: center;
+}
+
+#nav-items .item a {
+  color: var(--color-gold-200);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+#nav-items .item a:hover {
+  color: var(--color-gold-300);
+  background-color: var(--color-gold-100);
+}
+
+.skibka-logo {
+  height: 5rem;
+  margin: 0 1rem;
+}
+
+.inactive {
+  display: none;
+}
+
+.active {
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
