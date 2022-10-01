@@ -25,12 +25,17 @@
     background-color: var(--color-gold-200);
 }
 
+#show-login, #show-register {
+    box-shadow: 1px 1px 3px var(--color-gray-300);
+}
+
 #register-section, #login-section {
     width: 30%;
     padding: 2rem 2rem 4rem 2rem;
     margin: 5rem auto 0 auto;
     background-color: var(--color-gold-100);
     border-radius: var(--border-radius-medium);
+    box-shadow: 1px 1px 3px var(--color-gray-300);
 }
 
 #register-section ul {
@@ -54,10 +59,22 @@
     flex-direction: column;
     width: 15rem;
     margin: 1rem auto;
+    text-align: center;
 }
 
 .list-element label {
     font-weight: lighter;
+    margin: 0.25rem 0;
+}
+
+.list-element input {
+    border-radius: var(--border-radius-small);
+    border-color: var(--color-white-100);
+}
+
+.list-element input:focus {
+    border-color: var(--color-white-200);
+    outline: none;
 }
 
 .buttons {
@@ -68,7 +85,21 @@
 }
 
 .buttons button {
-    width: 6rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 7.5rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background-color: var(--color-white-100);
+    cursor: pointer;
+    border-radius: var(--border-radius-medium);
+    text-align: center;
+    justify-content: center;
+}
+
+.buttons button:hover {
+    background-color: var(--color-white-200);
 }
 
 @media only screen and (max-width: 48rem) {

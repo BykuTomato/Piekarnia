@@ -1,14 +1,21 @@
 html {
   --color-gold-50: rgba(244, 227, 196, 0.8);
   --color-gold-100: rgba(252, 222, 164, 0.8);
+  --color-gold-150: rgba(249, 213, 142, 0.8);
   --color-gold-200: rgba(192, 136, 30, 0.8);
   --color-gold-300: rgb(146, 103, 23);
 
+  --color-white-100: rgba(255, 255, 255, 0.3);
+  --color-white-200: rgba(255, 255, 255, 0.5);
+
+
+  --color-gray-100: rgb(126, 126, 126);
   --color-gray-300: rgb(72, 72, 72);
   --color-gray-500: rgb(46, 46, 46);
 
   --color-brown-200: rgb(91, 57, 55);
 
+  --border-radius-small: 6px;
   --border-radius-medium: 8px;
 
   font-family: 'Cormorant Infant', serif;
