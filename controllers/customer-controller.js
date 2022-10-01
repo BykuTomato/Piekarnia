@@ -14,9 +14,14 @@ function getAboutPage(req, res) {
   res.render("customer/about");
 }
 
+function getOrdersPage(req, res) {
+  res.render("customer/orders");
+}
+
 module.exports = {
   getMainPage: getMainPage,
   getPortfolioPage: getPortfolioPage,
   getContactPage: getContactPage,
   getAboutPage: getAboutPage,
+  getOrdersPage: getOrdersPage,
 };

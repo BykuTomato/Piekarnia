@@ -5,10 +5,12 @@ const customerController = require("../../controllers/customer-controller");
 
 router.get("/", customerController.getMainPage);
 
-router.get("/about", customerController.getAboutPage);
+router.get("/historia", customerController.getAboutPage);
 
-router.get("/contact", customerController.getContactPage);
+router.get("/kontakt", customerController.getContactPage);
 
-router.get("/portfolio", customerController.getPortfolioPage);
+router.get("/produkty", customerController.getPortfolioPage);
+
+router.get("/zamowienia", customerController.getOrdersPage);
 
 module.exports = router;

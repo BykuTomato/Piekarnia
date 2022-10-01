@@ -1,11 +1,73 @@
 <%- include("../shared/head", {title: "Skibka - manufaktura chleba"}) %>
 <link rel="stylesheet" href="/styles/base.css">
 <link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/styles/orders.css">
 <link rel="stylesheet" href="/styles/hamburger.css">
 <script src="/scripts/hamburger.js" defer></script>
+<script src="/scripts/show-forms.js" defer></script>
 </head>
 <%- include("../shared/header") %>
 <body>
+    <img id="background-img" src="/images/background-baking.jpg" alt="">
+    <section>
+        <p>
+            <ul id="log-or-register">
+                <li>
+                    <a id="show-login">Zaloguj się</a>
+                </li>
+                <li>
+                    <a id="show-register">Zarejestruj się</a>
+                </li>
+            </ul>
+        </p>
+    </section>
 
+    <section id="login-section" class="is-invisible ,is-visible">
+        <form action="" method="">
+            <ul>
+                <li>
+                    <label for="">E-mail</label>
+                    <input type="email">
+                </li>
+                <li>
+                    <label for="">Hasło</label>
+                    <input type="password">
+                </li>
+            </ul>
+            <div>
+                <button>Logowanie</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="register-section" class="is-invisible ,is-visible">
+        <form action="" method="">
+            <ul>
+                <li>
+                    <label for="">Imię</label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label for="">Nazwisko</label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label for="">E-mail</label>
+                    <input type="email"">
+                </li>
+                <li>
+                    <label for="">Hasło</label>
+                    <input type="password">
+                </li>
+                <li>
+                    <label for="">Potwierdź hasło</label>
+                    <input type="password">
+                </li>
+            </ul>
+            <div>
+                <button>Rejestracja</button>
+            </div>
+        </form>
+    </section>
 </body>
 <%- include("../shared/footer") %>

@@ -8,6 +8,10 @@
 }
 
 @media only screen and (max-width: 48rem) {
+nav {
+    top: 0;
+}
+
 .hamburger-icon {
     display: block;
     width: 2rem;

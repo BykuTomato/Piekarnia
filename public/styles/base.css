@@ -1,12 +1,21 @@
 html {
-  --color-gold-100: rgba(252, 222, 164, 0.719);
-  --color-gold-200: rgb(192, 136, 30);
+  --color-gold-50: rgba(244, 227, 196, 0.8);
+  --color-gold-100: rgba(252, 222, 164, 0.8);
+  --color-gold-200: rgba(192, 136, 30, 0.8);
   --color-gold-300: rgb(146, 103, 23);
 
+  --color-gray-300: rgb(72, 72, 72);
+  --color-gray-500: rgb(46, 46, 46);
 
   --color-brown-200: rgb(91, 57, 55);
 
+  --border-radius-medium: 8px;
+
   font-family: 'Cormorant Infant', serif;
+}
+
+body {
+  margin: 0;
 }
 
 ul,
@@ -42,7 +51,7 @@ a {
 #nav-items .item a {
   color: var(--color-gold-200);
   padding: 0.75rem;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius-medium);
 }
 
 #nav-items .item a:hover {
@@ -60,8 +69,12 @@ a {
 }
 
 .active {
-  margin: 5rem auto;
+  margin: -2px auto;
   display: flex;
   flex-direction: column;
   text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
 }

@@ -1,0 +1,55 @@
+#background-img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+#log-or-register {
+    padding: 0;
+    margin: 15rem auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#log-or-register a {
+    padding: 2rem 5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--color-gold-100);
+    border-radius: var(--border-radius-medium);
+    color: var(--color-gray-500);
+}
+
+#log-or-register a:hover {
+    background-color: var(--color-gold-200);
+}
+
+.is-invisible {
+    display: none;
+}
+
+.is-visible {
+    display: block;
+}
+
+@media only screen and (max-width: 48rem) {
+    #log-or-register {
+        width: 70%;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 5rem auto;
+    }
+
+    #log-or-register a {
+        display: block;
+        margin: 1rem 0;
+        text-align: center;
+        padding: 1.5rem 4rem;
+    }
+
+    #background-img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
