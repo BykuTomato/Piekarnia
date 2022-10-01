@@ -6,14 +6,14 @@
 
 #log-or-register {
     padding: 0;
-    margin: 15rem auto;
+    margin: 15rem auto 0 auto;
     width: 50%;
     display: flex;
     justify-content: space-between;
 }
 
 #log-or-register a {
-    padding: 2rem 5rem;
+    padding: 2rem 4rem;
     font-size: 1.5rem;
     font-weight: 700;
     background-color: var(--color-gold-100);
@@ -25,12 +25,50 @@
     background-color: var(--color-gold-200);
 }
 
+#register-section, #login-section {
+    width: 30%;
+    padding: 2rem 2rem 4rem 2rem;
+    margin: 5rem auto 0 auto;
+    background-color: var(--color-gold-100);
+    border-radius: var(--border-radius-medium);
+}
+
+#register-section ul {
+    padding: 0;
+}
+
+#login-section ul {
+    padding: 0;
+}
+
 .is-invisible {
     display: none;
 }
 
 .is-visible {
     display: block;
+}
+
+.list-element {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    margin: 1rem auto;
+}
+
+.list-element label {
+    font-weight: lighter;
+}
+
+.buttons {
+    width: 60%;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    width: 6rem;
 }
 
 @media only screen and (max-width: 48rem) {
