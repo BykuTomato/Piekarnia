@@ -10,6 +10,7 @@ body {
     background-color: var(--color-gold-100);
     text-align: center;
     font-size: 1.25rem;
+    box-shadow: 1px 1px 3px var(--color-gray-300);
 }
 
 h1 {

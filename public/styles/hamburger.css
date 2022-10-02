@@ -2,15 +2,27 @@
     display: none;
 }
 
-#hamburger-menu-content {
+#hamburger-menu {
     margin: 0;
     padding: 0;
 }
+#hamburger-menu-content {
+    margin: 5rem auto 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+}
+
+#hamburger-menu-content a {
+    color: var(--color-gold-300);
+}
 
 @media only screen and (max-width: 48rem) {
-nav {
-    top: 0;
-}
+    nav {
+        top: 0;
+    }
 
 .hamburger-icon {
     display: block;

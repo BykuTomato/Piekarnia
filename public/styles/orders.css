@@ -4,6 +4,12 @@
     width: 100%;
 }
 
+#background-mobile {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+}
+
 #log-or-register {
     padding: 0;
     margin: 15rem auto 0 auto;
@@ -103,6 +109,9 @@
 }
 
 @media only screen and (max-width: 48rem) {
+    #background-img {
+        display: none;
+    }
     #log-or-register {
         width: 70%;
         flex-direction: column;
@@ -120,5 +129,27 @@
     #background-img {
         height: 100%;
         object-fit: cover;
+    }
+
+    #login-section, #register-section {
+        padding: 1rem 1rem 2rem 1rem;
+        width: 60%;
+        margin-bottom: 4rem;
+    }
+
+    .list-element {
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .buttons {
+        width: 80%;
+    }
+
+    .buttons button {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.75rem;
+        width: 5rem;
     }
 }
