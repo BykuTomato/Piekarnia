@@ -1,13 +1,9 @@
-#background-img {
+.background-img {
     position: absolute;
     z-index: -1;
+    height: 125%;
     width: 100%;
-}
-
-#background-mobile {
-    position: absolute;
-    z-index: -1;
-    height: 100%;
+    object-fit: cover;
 }
 
 #log-or-register {
@@ -109,8 +105,10 @@
 }
 
 @media only screen and (max-width: 48rem) {
-    #background-img {
-        display: none;
+    .background-img {
+        height: 125%;
+        width: 100%;
+        object-fit: cover;
     }
     #log-or-register {
         width: 70%;

@@ -19,6 +19,8 @@ html {
   --border-radius-medium: 8px;
 
   font-family: 'Cormorant Infant', serif;
+
+  scroll-behavior: smooth;
 }
 
 body {
