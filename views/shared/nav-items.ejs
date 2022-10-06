@@ -20,6 +20,15 @@
         <a href="/kontakt">Kontakt</a>
     </li>
 
+    <% if(locals.isAuth) { %>
+        <li class="item">
+            <form action="/wyloguj" method="POST">
+                <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+                <button>Wyloguj</button>
+            </form>
+        </li>
+    <% } %>
+
 </ul>
 
 <ul id="nav-items-small">

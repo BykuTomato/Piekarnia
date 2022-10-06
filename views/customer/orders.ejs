@@ -23,7 +23,7 @@
     </section>
 
     <section id="login-section" class="is-invisible ,is-visible">
-        <form action="" method="">
+        <form action="/logowanie" method="POST">
             <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
             <ul> 
                 <li class="list-element">
@@ -43,7 +43,7 @@
     </section>
 
     <section id="register-section" class="is-invisible ,is-visible">
-        <form action="/signup" method="POST">
+        <form action="/rejestracja" method="POST">
             <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
             <ul>
                 <li class="list-element">
