@@ -25,6 +25,25 @@
     color: var(--color-gray-500);
 }
 
+#log-or-register button {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 2rem 4rem;
+    border: none;
+    background-color: var(--color-gold-100);
+    cursor: pointer;
+    border-radius: var(--border-radius-medium);
+    text-align: center;
+    justify-content: center;
+    box-shadow: 1px 1px 3px var(--color-gray-300);
+}
+
+#log-or-register button:hover {
+    background-color: var(--color-gold-200);
+}
+
 #log-or-register p:hover {
     background-color: var(--color-gold-200);
 }
@@ -119,7 +138,7 @@
         margin: 5rem auto;
     }
 
-    #log-or-register a {
+    #log-or-register p {
         display: block;
         margin: 1rem 0;
         text-align: center;

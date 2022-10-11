@@ -5,6 +5,10 @@ html {
   --color-gold-200: rgba(192, 136, 30, 0.8);
   --color-gold-300: rgb(146, 103, 23);
 
+  --color-red-100: rgba(253, 89, 89, 0.606);
+  --color-red-200: rgba(253, 74, 74, 0.606);
+  --color-red-600: rgb(97, 0, 0);
+
   --color-white-100: rgba(255, 255, 255, 0.3);
   --color-white-200: rgba(255, 255, 255, 0.5);
 
@@ -86,4 +90,16 @@ a {
   width: 100%;
   background-color: white;
   position: absolute;
+}
+
+#warning-login, #warning-signup {
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-red-100);
+  color: var(--color-red-600);
+  text-align: center;
+
 }

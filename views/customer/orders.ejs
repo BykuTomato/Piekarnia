@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="/styles/hamburger.css">
 <script src="/scripts/hamburger.js" defer></script>
 <script src="/scripts/show-forms.js" defer></script>
+<script src="/scripts/validate-input.js" defer></script>
 </head>
 <%- include("../shared/header") %>
 <body>
@@ -12,12 +13,22 @@
     <section>
         <p>
             <ul id="log-or-register">
+                <% if(locals.isAuth) { %>
+                    <li>
+                        <form action="/wyloguj" method="POST">
+                            <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+                            <button id="logout">Wyloguj</button>
+                        </form>
+                    </li>
+                <% } %>
+                <% if(!locals.isAuth)  { %>
                 <li>
                     <a href="#login-section" id="show-login"><p>Zaloguj się</p></a>
                 </li>
                 <li>
                     <a href="#register-section" id="show-register"><p>Zarejestruj się</p></a>
                 </li>
+                <% } %>
             </ul>
         </p>
     </section>
@@ -35,9 +46,10 @@
                     <input type="password" name="user-password" id="user-password">
                 </li>
             </ul>
+            <p id="warning-login"></p>
             <div class="buttons"> 
                 <button type="reset">Reset</button>
-                <button>Logowanie</button>
+                <button id="login-btn">Logowanie</button>
             </div>
         </form>
     </section>
@@ -60,16 +72,17 @@
                 </li>
                 <li class="list-element">
                     <label for="user-password">Hasło</label>
-                    <input type="password" name="user-password" id="user-password">
+                    <input type="password" name="user-password" id="user-password" minlength="5">
                 </li>
                 <li class="list-element">
                     <label for="user-confirmpassword">Potwierdź hasło</label>
-                    <input type="password" name="user-confirmpassword" id="user-confirmpassword">
+                    <input type="password" name="user-confirmpassword" id="user-confirmpassword" minlength="5">
                 </li>
             </ul>
+            <p id="warning-signup"></p>
             <div class="buttons">
                 <button type="reset">Reset</button>
-                <button>Rejestracja</button>
+                <button id="signup-btn">Rejestracja</button>
             </div>
         </form>
     </section>

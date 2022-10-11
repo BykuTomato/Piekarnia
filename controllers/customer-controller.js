@@ -22,9 +22,15 @@ function getOrdersPage(req, res) {
   res.render("customer/orders");
 }
 
-async function logIn(req, res) {
+async function logIn(req, res, next) {
   const customer = new Customer(req.body['user-email'], req.body['user-password']);
-  const existingCustomer = await customer.findByEmail();
+  
+  let existingCustomer;
+  try {
+    existingCustomer = await customer.findByEmail();
+  } catch (error) {
+    return next(error);
+  }
 
   if(!existingCustomer) {
     res.redirect("/zamowienia");
@@ -48,10 +54,14 @@ function logOut(req, res) {
   res.redirect("/zamowienia");
 }
 
-async function signUp(req, res) {
+async function signUp(req, res, next) {
   const customer = new Customer(req.body['user-email'], req.body['user-password'], req.body['user-name'], req.body['user-lastname']);
 
-  await customer.signup();
+  try {
+    await customer.signup();
+  } catch (error) {
+    return next(error);
+  }
 
   res.redirect("/zamowienia");
 }
