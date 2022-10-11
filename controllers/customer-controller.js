@@ -45,7 +45,7 @@ async function logIn(req, res, next) {
   }
 
   authenticationUtility.createCustomerSessions(req, existingCustomer, function() {
-    res.redirect("/");
+    res.redirect("/zamowienia");
   })
 }
 

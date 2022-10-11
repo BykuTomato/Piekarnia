@@ -5,8 +5,8 @@ html {
   --color-gold-200: rgba(192, 136, 30, 0.8);
   --color-gold-300: rgb(146, 103, 23);
 
-  --color-red-100: rgba(253, 89, 89, 0.606);
-  --color-red-200: rgba(253, 74, 74, 0.606);
+  --color-red-100: rgba(253, 89, 89, 0.6);
+  --color-red-200: rgba(253, 74, 74, 0.6);
   --color-red-600: rgb(97, 0, 0);
 
   --color-white-100: rgba(255, 255, 255, 0.3);
@@ -82,11 +82,11 @@ a {
 }
 
 .active {
-  margin: -2px auto;
+  margin: -1px auto;
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 100%;
+  height: 130%;
   width: 100%;
   background-color: white;
   position: absolute;
@@ -101,5 +101,5 @@ a {
   background-color: var(--color-red-100);
   color: var(--color-red-600);
   text-align: center;
-
+  font-size: 0.75rem;
 }
