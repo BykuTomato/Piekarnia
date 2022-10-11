@@ -2,8 +2,8 @@ const loginEmailInputElement = document.querySelector("#login-section #user-emai
 const loginPasswordInputElement = document.querySelector("#login-section #user-password");
 
 const signupEmailInputElement = document.querySelector("#register-section #user-email");
-const signupPasswordInputElement = document.querySelector("#register-section #user-confirmpassword");
-const signupConfirmpasswordInputElement = document.querySelector("#register-section #user-name");
+const signupPasswordInputElement = document.querySelector("#register-section #user-password");
+const signupConfirmpasswordInputElement = document.querySelector("#register-section #user-confirmpassword");
 const signupNameInputElement = document.querySelector("#register-section #user-name");
 const signupLastnameInputElement = document.querySelector("#register-section #user-lastname");
 
@@ -31,6 +31,11 @@ function flashSignupErrors(event) {
 
         warningSignupMessageElement.style.display = "block";
         warningSignupMessageElement.innerText = "Wprowadź prawidłowe dane";
+    } else if(signupPasswordInputElement.value !== signupConfirmpasswordInputElement.value) {
+        event.preventDefault();
+        console.log("mismatched");
+        warningSignupMessageElement.style.display = "block";
+        warningSignupMessageElement.innerText = "Hasła różnią się";
     }
 }
 
