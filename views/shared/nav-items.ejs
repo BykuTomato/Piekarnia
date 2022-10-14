@@ -1,5 +1,24 @@
 <ul id="nav-items">
     
+    <% if(locals.isAdmin) { %>
+        <li class="item">
+            <a href="/admin/dodaj">Dodaj nowy produkt</a>
+        </li>
+        <li class="item">
+            <a href="/admin/status">Status zamówień</a>
+        </li>
+        <li>
+            <a href="/"><img class="skibka-logo" src="images/logo.svg" alt="Logo"></a> 
+        </li>
+        <li class="item">
+            <a href="/admin/klienci">Podgląd klientów</a>
+        </li>
+        <li class="item">
+            <a href="/admin/inne">Inne funkcje</a>
+        </li>
+    <% } %>
+
+    <% if(!locals.isAdmin) { %>
     <li class="item">    
         <a href="/historia">O nas</a> 
     </li>
@@ -19,7 +38,7 @@
     <li class="item">
         <a href="/kontakt">Kontakt</a>
     </li>
-
+    <% } %>
 </ul>
 
 <ul id="nav-items-small">

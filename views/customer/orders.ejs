@@ -86,8 +86,10 @@
             </div>
         </form>
     </section>
+    <% if(locals.isAuth && !locals.isAdmin) { %>
     <section id="cart">
     <%- include("./cart") %>
     </section>
+    <% } %>
 </body>
 <%- include("../shared/footer") %>
