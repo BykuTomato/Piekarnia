@@ -34,6 +34,18 @@ li input[type="text"],li input[type="number"], li textarea{
     border-color: var(--color-white-100);
     border-width: 2px;
     border-style: inset; 
+    resize: none;
 }
 
+
+@media only screen and (max-width: 48rem) {
+    form {
+        margin: 4rem auto;
+        width: 70%;
+    }
+
+    li input[type="text"],li input[type="number"], li textarea {
+        width: 100%;
+    }
+}
 
