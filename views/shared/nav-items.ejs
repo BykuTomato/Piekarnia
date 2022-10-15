@@ -8,7 +8,7 @@
             <a href="/admin/status">Status zamówień</a>
         </li>
         <li>
-            <a href="/"><img class="skibka-logo" src="images/logo.svg" alt="Logo"></a> 
+            <a href="/"><img class="skibka-logo" src="images/logo.svg" alt="Louda"></a> 
         </li>
         <li class="item">
             <a href="/admin/klienci">Podgląd klientów</a>
@@ -17,7 +17,7 @@
             <a href="/admin/inne">Inne funkcje</a>
         </li>
     <% } %>
-
+    
     <% if(!locals.isAdmin) { %>
     <li class="item">    
         <a href="/historia">O nas</a> 
@@ -57,6 +57,7 @@
 
 <aside id="hamburger-menu" class="active, inactive">
     <ul id="hamburger-menu-content">
+        <% if(!locals.isAdmin) { %>
         <li>
             <a href="/historia">O nas</a> 
         </li>
@@ -72,5 +73,23 @@
         <li>
             <a href="/kontakt">Kontakt</a>
         </li>
+        <% } %>
+        <% if(locals.isAdmin) { %>
+            <li>
+                <a href="/admin/dodaj">Dodaj nowy produkt</a>
+            </li>
+            <li>
+                <a href="/admin/status">Status zamówień</a>
+            </li>
+            <li>
+                <a  href="/">Strona główna</a> 
+            </li>
+            <li>
+                <a href="/admin/klienci">Podgląd klientów</a>
+            </li>
+            <li>
+                <a href="/admin/inne">Inne funkcje</a>
+            </li>
+        <% } %>
     </ul>
 </aside>

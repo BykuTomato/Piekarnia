@@ -12,10 +12,12 @@ const checkAuthStatusMiddleware = require("./middlewares/check-auth");
 
 const baseRoutes = require("./routes/customer/base-routes");
 const authRoutes = require("./routes/customer/auth-routes");
+const adminRoutes = require("./routes/admin/admin-routes");
 
 const app = express();
 
 app.use(express.static("public"));
+app.use("/admin", express.static("public"));
 app.use(express.urlencoded({extended: false}));
 
 app.set("view engine", "ejs");
@@ -32,6 +34,7 @@ app.use(checkAuthStatusMiddleware);
 
 app.use(baseRoutes);
 app.use(authRoutes);
+app.use("/admin",adminRoutes);
 
 app.use(handleErrorsMiddleware);
 
