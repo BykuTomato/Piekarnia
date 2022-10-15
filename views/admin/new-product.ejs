@@ -2,10 +2,37 @@
 <link rel="stylesheet" href="/styles/base.css">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/styles/hamburger.css">
+<link rel="stylesheet" href="/styles/admin-new-product.css">
 <script src="/scripts/hamburger.js" defer></script>
 </head>
 <%- include("../shared/header") %>
 <body>
-    
+    <form action="" method="">
+        <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+        <ul>
+            <li>
+                <label for="title">Tytuł</label>
+                <input type="text" name="title" id="title">
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label for="description">Opis</label>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label for="price">Cena</label>
+                <input type="number" name="price" id="price">
+            </li>
+        </ul>
+        <ul>
+            <li id="input-phot0">
+                <label for="photo">Zdjęcie</label>
+                <input type="file" name="photo" id="photo" accept="JPEG">
+            </li>
+        </ul>
+    </form>
 </body>
 <%- include("../shared/footer") %>

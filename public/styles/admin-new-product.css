@@ -1,0 +1,39 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: var(--border-radius-medium);
+    background-color: var(--color-gold-100);
+    box-shadow: 1px 1px 3px var(--color-gray-300);
+    
+}
+
+form ul {
+    padding: 0;
+}
+
+form ul li {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+li label {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+li input[type="text"],li input[type="number"], li textarea{
+    width: 80%;
+    margin: 0 auto;
+    border-radius: var(--border-radius-small);
+    border-color: var(--color-white-100);
+    border-width: 2px;
+    border-style: inset; 
+}
+
+
