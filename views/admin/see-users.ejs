@@ -2,10 +2,20 @@
 <link rel="stylesheet" href="/styles/base.css">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/styles/hamburger.css">
+<link rel="stylesheet" href="/styles/admin-see-users.css">
 <script src="/scripts/hamburger.js" defer></script>
 </head>
 <%- include("../shared/header") %>
 <body>
-    
+    <section>
+        <ul id="users-list">
+            <% for(const user of allUsers) { %>
+                <li class="user">
+                    <h2><%= user.name %> <%= user.lastname %></h2>
+                    <p><%= user.email %></p>
+                </li>
+            <% } %>
+        </ul>
+    </section>
 </body>
 <%- include("../shared/footer") %>

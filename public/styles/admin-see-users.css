@@ -1,0 +1,28 @@
+#users-list {
+    padding: 1rem;
+    margin: 3rem auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--color-gold-100);
+    border-radius: var(--border-radius-small);
+    box-shadow: 1px 1px 3px var(--color-gray-300);
+
+}
+
+.user {
+    padding: 1rem;
+    background-color: var(--color-white-200);
+    text-align: center;
+    border-radius: var(--border-radius-small);
+
+}
+
+.user:hover {
+    cursor: pointer;
+    background-color: var(--color-white-100);
+    box-shadow: 1px 1px 2px var(--color-gray-300) inset;
+
+}
