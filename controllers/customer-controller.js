@@ -6,8 +6,12 @@ function getMainPage(req, res) {
   res.render("customer/main");
 }
 
-function getPortfolioPage(req, res) {
-  res.render("customer/portfolio");
+async function getProductsPage(req, res) {
+  const customer = new Customer();
+
+  const allProducts = await customer.showAllProducts();
+
+  res.render("customer/portfolio", {allProducts: allProducts});
 }
 
 function getContactPage(req, res) {
@@ -68,7 +72,7 @@ async function signUp(req, res, next) {
 
 module.exports = {
   getMainPage: getMainPage,
-  getPortfolioPage: getPortfolioPage,
+  getProductsPage: getProductsPage,
   getContactPage: getContactPage,
   getAboutPage: getAboutPage,
   getOrdersPage: getOrdersPage,

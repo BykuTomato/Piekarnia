@@ -7,4 +7,6 @@ router.get("/dodaj", adminController.getAddNewProductPage);
 
 router.get("/klienci", adminController.getAllUsersPage);
 
+router.post("/dodaj", adminController.addNewProduct);
+
 module.exports = router;

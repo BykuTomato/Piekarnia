@@ -26,6 +26,10 @@ class Customer {
         console.log("Successfully signed up");
     }
 
+    showAllProducts() {
+        return database.getDatabase().collection("products").find().toArray();
+    }
+
     findByEmail() {
         return database.getDatabase().collection("customers").findOne({email: this.email});
     }

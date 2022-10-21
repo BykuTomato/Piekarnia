@@ -201,4 +201,8 @@
     #warning-login, #warning-signup {
         width: 70%;
     }
+
+    #cart {
+        width: 70%;
+    }
 }

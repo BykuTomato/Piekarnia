@@ -9,7 +9,7 @@ router.get("/historia", customerController.getAboutPage);
 
 router.get("/kontakt", customerController.getContactPage);
 
-router.get("/produkty", customerController.getPortfolioPage);
+router.get("/produkty", customerController.getProductsPage);
 
 router.get("/zamowienia", customerController.getOrdersPage);
 
