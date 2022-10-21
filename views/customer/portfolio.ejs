@@ -2,18 +2,19 @@
 <link rel="stylesheet" href="/styles/base.css">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/styles/hamburger.css">
+<link rel="stylesheet" href="/styles/portfolio.css">
 <script src="/scripts/hamburger.js" defer></script>
 </head>
 <%- include("../shared/header") %>
 <body>
     <section>
         <h1>Nasze chlebki</h1>
-        <ul>
+        <ul id="product-list">
             <% for(const product of allProducts) { %>
                 <li>
                     <h2 class="product-title"><%= product.title %></h2>
                     <p class="product-description"><%= product.description %></p>
-                    <p class="product-price"><%= product.price%></p>
+                    <p class="product-price">Cena: <%= product.price%> zł</p>
                 </li>
             <% } %>
         </ul>

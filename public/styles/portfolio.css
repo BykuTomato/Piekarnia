@@ -1,0 +1,45 @@
+h1 {
+    text-align: center;
+}
+
+#product-list {
+    padding: 0;
+    margin: 2rem auto;
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3, 28%);
+    justify-content: center;
+    gap: 1rem;
+}
+
+#product-list li {
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius-medium);
+    background-color: var(--color-gold-100);
+    align-content: center;
+}
+
+.product-title {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.product-description {
+    margin: 1rem auto;
+    width: 90%;
+    text-align: justify;
+}
+
+.product-price {
+    text-align: center;
+    font-style: italic;
+}
+    
+
+
+@media only screen and (max-width: 48rem) {
+    #product-list {
+        display: flex;
+        flex-direction: column;
+    }
+}
