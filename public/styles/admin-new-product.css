@@ -51,6 +51,11 @@ li input[type="text"],li input[type="number"], li textarea{
     border-radius: var(--border-radius-small);
 }
 
+#input-photo label:hover {
+    background-color: var(--color-white-200);
+    cursor: pointer;
+}
+
 li input[type="file"] {
     display: none;
 }
