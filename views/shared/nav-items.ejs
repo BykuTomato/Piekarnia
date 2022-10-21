@@ -2,7 +2,7 @@
     
     <% if(locals.isAdmin) { %>
         <li class="item">
-            <a href="/admin/dodaj">Dodaj nowy produkt</a>
+            <a href="/admin/dodaj">Dodaj produkt</a>
         </li>
         <li class="item">
             <a href="/admin/status">Status zamówień</a>
@@ -55,7 +55,7 @@
 </ul>
 
 
-<aside id="hamburger-menu" class="active, inactive">
+<aside id="hamburger-menu" class="inactive">
     <ul id="hamburger-menu-content">
         <% if(!locals.isAdmin) { %>
         <li>

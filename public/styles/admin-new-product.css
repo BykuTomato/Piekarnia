@@ -1,13 +1,18 @@
+.admin-title {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 form {
     display: flex;
     flex-direction: column;
     width: 30%;
-    margin: 2rem auto;
-    padding: 2rem;
+    margin: 0 auto 3rem auto;
+    padding: 2rem 1rem;
     border-radius: var(--border-radius-medium);
     background-color: var(--color-gold-100);
     box-shadow: 1px 1px 3px var(--color-gray-300);
-    
 }
 
 form ul {
@@ -37,11 +42,30 @@ li input[type="text"],li input[type="number"], li textarea{
     resize: none;
 }
 
+#input-photo label {
+    margin: 0 auto;
+    font-size: 1rem; 
+    padding: 1rem;
+    color: var(--color-brown-200);
+    background-color: var(--color-white-100);
+    border-radius: var(--border-radius-small);
+}
+
+li input[type="file"] {
+    display: none;
+}
+
 
 @media only screen and (max-width: 48rem) {
+    .admin-title {
+        margin-top: 0;
+    }
+
+
     form {
         margin: 4rem auto;
         width: 70%;
+        padding: 2rem;
     }
 
     li input[type="text"],li input[type="number"], li textarea {
