@@ -27,8 +27,18 @@ async function addNewProduct(req, res) {
     res.render("admin/new-product");
 }
 
+function getOtherPage(req, res) {
+    res.render("admin/other")
+}
+
+function getOrdersStatusPage(req, res) {
+    res.render("admin/orders");
+}
+
 module.exports = {
     getAddNewProductPage: getAddNewProductPage,
     getAllUsersPage: getAllUsersPage,
     addNewProduct: addNewProduct,
+    getOtherPage: getOtherPage,
+    getOrdersStatusPage: getOrdersStatusPage,
 }

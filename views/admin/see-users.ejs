@@ -8,12 +8,15 @@
 <%- include("../shared/header") %>
 <body>
     <section>
-        <h1 class="admin-title">Użytkownicy</h1>
+        <h1 class="admin-title">Klienci</h1>
         <ul id="users-list">
             <% for(const user of allUsers) { %>
                 <li class="user">
                     <h2><%= user.name %> <%= user.lastname %></h2>
                     <p><%= user.email %></p>
+                    <% if(user.isAdmin) { %>
+                    <p style="color: var(--color-red-600); font-weight: 700;">ADMIN</p>
+                    <% } %>
                 </li>
             <% } %>
         </ul>

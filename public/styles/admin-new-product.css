@@ -40,13 +40,13 @@ li input[type="text"],li input[type="number"], li textarea{
     border-width: 2px;
     border-style: inset; 
     resize: none;
+    font: inherit;
 }
 
 #input-photo label {
     margin: 0 auto;
     font-size: 1rem; 
     padding: 1rem;
-    color: var(--color-brown-200);
     background-color: var(--color-white-100);
     border-radius: var(--border-radius-small);
 }
@@ -60,6 +60,21 @@ li input[type="file"] {
     display: none;
 }
 
+button {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    font: inherit;
+    font-weight: 700;
+    border: none;
+    background-color: var(--color-white-100);
+    border-radius: var(--border-radius-small);
+    /* box-shadow: 1px 1px 3px var(--color-gray-300); */
+}
+
+button:hover {
+    background-color: var(--color-white-200);
+    cursor: pointer;
+}
 
 @media only screen and (max-width: 48rem) {
     .admin-title {
