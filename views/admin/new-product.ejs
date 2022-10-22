@@ -7,9 +7,8 @@
 </head>
 <%- include("../shared/header") %>
 <body>
-    <form action="/admin/dodaj" method="POST">
+    <form action="/admin/dodaj?_csrf=<%= locals.csrfToken %>" method="POST" enctype="multipart/form-data">
         <h1 class="admin-title">Nowy produkt</h1>
-        <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
         <ul>
             <li>
                 <label for="title">Tytuł</label>
@@ -31,7 +30,7 @@
         <ul>
             <li id="input-photo">
                 <label for="photo">Wybierz zdjęcie</label>
-                <input type="file" name="photo" id="photo" accept="JPEG">
+                <input type="file" name="photo" id="photo" accept="image/png,image/jpg"">
             </li>
         </ul>
         <button>Dodaj produkt</button>

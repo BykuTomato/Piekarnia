@@ -48,7 +48,18 @@ h1 {
     font-style: italic;
 }
     
+.product-cart {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 700;
+    background-color: var(--color-white-100);
+    border-radius: var(--border-radius-medium);
+}
 
+.product-cart:hover {
+    cursor: pointer;
+    background-color: var(--color-white-200);
+}
 
 @media only screen and (max-width: 48rem) {
     #product-list {

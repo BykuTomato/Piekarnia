@@ -16,6 +16,9 @@
                     <h2 class="product-title"><%= product.title %></h2>
                     <p class="product-description"><%= product.description %></p>
                     <p class="product-price">Cena: <%= product.price%> zł</p>
+                    <% if(locals.isAuth) { %>
+                        <p class="product-cart">Dodaj do koszyka</p>
+                    <% } %>
                 </li>
             <% } %>
         </ul>
