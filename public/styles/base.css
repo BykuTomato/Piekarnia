@@ -103,3 +103,8 @@ a {
   text-align: center;
   font-size: 0.75rem;
 }
+
+.error-code-title {
+  margin: 5rem auto;
+  text-align: center;
+}

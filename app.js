@@ -6,6 +6,7 @@ const expressSession = require("express-session");
 const createSessionConfig = require("./config/session");
 const database = require("./database/database");
 
+const handleInvalidRoutesMiddleware = require("./middlewares/handle-invalid-routes");
 const handleErrorsMiddleware = require("./middlewares/error-handling");
 const addCsrfTokenMiddleware = require("./middlewares/csrf-token");
 const checkAuthStatusMiddleware = require("./middlewares/check-auth");
@@ -39,6 +40,8 @@ app.use(protectRoutesMiddleware);
 app.use("/admin",adminRoutes);
 
 app.use(handleErrorsMiddleware);
+app.use(handleInvalidRoutesMiddleware);
+
 
 database.connectToDatabase().then(function() {
     app.listen(3000);
