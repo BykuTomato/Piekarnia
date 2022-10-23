@@ -1,4 +1,5 @@
 const Customer  = require("../models/customer-model")
+const Product = require("../models/product-model");
 const database = require("../database/database");
 const authenticationUtility = require("../utilities/authenticate");
 
@@ -6,12 +7,16 @@ function getMainPage(req, res) {
   res.render("customer/main");
 }
 
-async function getProductsPage(req, res) {
-  const customer = new Customer();
+async function getProductsPage(req, res, next) {
+  let allProducts;
 
-  const allProducts = await customer.showAllProducts();
-
-  res.render("customer/portfolio", {allProducts: allProducts});
+  try {
+    allProducts = await Product.getAllProducts();
+    console.log(allProducts);
+    res.render("customer/portfolio", {allProducts: allProducts});
+  } catch (error) {
+    return next(error);
+  }
 }
 
 function getContactPage(req, res) {

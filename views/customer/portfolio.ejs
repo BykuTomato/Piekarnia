@@ -14,6 +14,7 @@
             <% for(const product of allProducts) { %>
                 <li>
                     <h2 class="product-title"><%= product.title %></h2>
+                    <img class="product-image" src="<%= product.photoUrl %>" alt="<%= product.title %>">
                     <p class="product-description"><%= product.description %></p>
                     <p class="product-price">Cena: <%= product.price%> zł</p>
                     <% if(locals.isAuth) { %>

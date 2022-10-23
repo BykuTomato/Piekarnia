@@ -19,6 +19,7 @@ const adminRoutes = require("./routes/admin/admin-routes");
 const app = express();
 
 app.use(express.static("public"));
+app.use("/products/assets",express.static("product-data"));
 app.use("/admin", express.static("public"));
 app.use(express.urlencoded({extended: false}));
 
