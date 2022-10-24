@@ -3,6 +3,8 @@ const Product = require("../models/product-model");
 const database = require("../database/database");
 const authenticationUtility = require("../utilities/authenticate");
 
+const flash = require("connect-flash");
+
 function getMainPage(req, res) {
   res.render("customer/main");
 }
@@ -28,7 +30,7 @@ function getAboutPage(req, res) {
 }
 
 function getOrdersPage(req, res) {
-  res.render("customer/orders");
+  res.render("customer/orders", { message: req.flash("info") });
 }
 
 async function logIn(req, res, next) {
@@ -42,6 +44,7 @@ async function logIn(req, res, next) {
   }
 
   if(!existingCustomer) {
+    req.flash("info", "Użytkownik nie istnieje");
     res.redirect("/zamowienia");
     return;
   }
@@ -49,6 +52,7 @@ async function logIn(req, res, next) {
   const passwordsMatched = await customer.comparePasswords(existingCustomer.password);
 
   if(!passwordsMatched) {
+    req.flash("info", "Nieprawidłowe hasło");
     res.redirect("/zamowienia");
     return;
   }
@@ -64,6 +68,10 @@ function logOut(req, res) {
 }
 
 async function signUp(req, res, next) {
+  if(!req.body["user-email"].includes("@") || req.body["user-password"].trim().length() < 5) {
+
+  }
+
   const customer = new Customer(req.body['user-email'], req.body['user-password'], req.body['user-name'], req.body['user-lastname']);
 
   try {

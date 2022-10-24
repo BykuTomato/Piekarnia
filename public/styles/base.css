@@ -108,3 +108,14 @@ a {
   margin: 5rem auto;
   text-align: center;
 }
+
+.warning {
+  text-align: center;
+  margin: 5rem auto -5rem auto;
+  width: 15rem;
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-red-600);
+  border-radius: 10px;
+}

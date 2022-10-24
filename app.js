@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 const csrf = require("csurf");
 const expressSession = require("express-session");
+const flash = require("connect-flash");
+const cookieParser = require("cookie-parser");
 
 const createSessionConfig = require("./config/session");
 const database = require("./database/database");
@@ -29,6 +31,8 @@ app.set("views", path.join(__dirname, "views"));
 const sessionConfig = createSessionConfig();
 
 app.use(expressSession(sessionConfig));
+app.use(cookieParser());
+app.use(flash());
 
 app.use(csrf());
 app.use(addCsrfTokenMiddleware);

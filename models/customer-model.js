@@ -15,6 +15,8 @@ class Customer {
 
     async signup() {
         const hashedPassword = await bcrypt.hash(this.password, 12);
+
+        
         
         await database.getDatabase().collection("customers").insertOne({
             email: this.email,
