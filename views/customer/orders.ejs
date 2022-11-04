@@ -4,8 +4,10 @@
 <link rel="stylesheet" href="/styles/orders.css">
 <link rel="stylesheet" href="/styles/hamburger.css">
 <script src="/scripts/hamburger.js" defer></script>
+<% if(!locals.isAuth) { %>
 <script src="/scripts/show-forms.js" defer></script>
 <script src="/scripts/validate-input.js" defer></script>
+<% } %>
 </head>
 <%- include("../shared/header") %>
 <body>
@@ -34,7 +36,7 @@
         </p>
     </section>
 
-    <section id="login-section" class="is-invisible ,is-visible">
+    <section id="login-section" class="is-invisible">
         <form action="/logowanie" method="POST">
             <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
             <ul> 
@@ -55,7 +57,7 @@
         </form>
     </section>
 
-    <section id="register-section" class="is-invisible ,is-visible">
+    <section id="register-section" class="is-invisible">
         <form action="/rejestracja" method="POST">
             <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
             <ul>

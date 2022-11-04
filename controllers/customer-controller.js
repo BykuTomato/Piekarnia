@@ -1,4 +1,4 @@
-const Customer  = require("../models/customer-model")
+const Customer = require("../models/customer-model");
 const Product = require("../models/product-model");
 const database = require("../database/database");
 const authenticationUtility = require("../utilities/authenticate");
@@ -15,7 +15,7 @@ async function getProductsPage(req, res, next) {
   try {
     allProducts = await Product.getAllProducts();
     console.log(allProducts);
-    res.render("customer/portfolio", {allProducts: allProducts});
+    res.render("customer/portfolio", { allProducts: allProducts });
   } catch (error) {
     return next(error);
   }
@@ -34,8 +34,11 @@ function getOrdersPage(req, res) {
 }
 
 async function logIn(req, res, next) {
-  const customer = new Customer(req.body['user-email'], req.body['user-password']);
-  
+  const customer = new Customer(
+    req.body["user-email"],
+    req.body["user-password"]
+  );
+
   let existingCustomer;
   try {
     existingCustomer = await customer.findByEmail();
@@ -43,23 +46,29 @@ async function logIn(req, res, next) {
     return next(error);
   }
 
-  if(!existingCustomer) {
+  if (!existingCustomer) {
     req.flash("info", "Użytkownik nie istnieje");
     res.redirect("/zamowienia");
     return;
   }
 
-  const passwordsMatched = await customer.comparePasswords(existingCustomer.password);
+  const passwordsMatched = await customer.comparePasswords(
+    existingCustomer.password
+  );
 
-  if(!passwordsMatched) {
+  if (!passwordsMatched) {
     req.flash("info", "Nieprawidłowe hasło");
     res.redirect("/zamowienia");
     return;
   }
 
-  authenticationUtility.createCustomerSessions(req, existingCustomer, function() {
-    res.redirect("/zamowienia");
-  })
+  authenticationUtility.createCustomerSessions(
+    req,
+    existingCustomer,
+    function () {
+      res.redirect("/zamowienia");
+    }
+  );
 }
 
 function logOut(req, res) {
@@ -68,11 +77,20 @@ function logOut(req, res) {
 }
 
 async function signUp(req, res, next) {
-  if(!req.body["user-email"].includes("@") || req.body["user-password"].trim().length() < 5) {
-
+  if (
+    !req.body["user-email"].includes("@") ||
+    req.body["user-password"].trim().length < 5
+  ) {
+    req.flash("info", "Uzupełnij dane poprawnie");
+    res.redirect("/zamowienia");
   }
 
-  const customer = new Customer(req.body['user-email'], req.body['user-password'], req.body['user-name'], req.body['user-lastname']);
+  const customer = new Customer(
+    req.body["user-email"],
+    req.body["user-password"],
+    req.body["user-name"],
+    req.body["user-lastname"]
+  );
 
   try {
     await customer.signup();

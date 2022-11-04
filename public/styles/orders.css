@@ -1,208 +1,216 @@
 .background-img {
-    position: absolute;
-    z-index: -1;
-    height: 140%;
-    width: 100%;
-    object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  height: 140%;
+  width: 100%;
+  object-fit: cover;
 }
 
 #log-or-register {
-    padding: 0;
-    margin: 7.5rem auto 0 auto;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
+  padding: 0;
+  margin: 7.5rem auto 0 auto;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
 }
 
 #log-or-register p {
-    padding: 2rem 4rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    background-color: var(--color-gold-100);
-    border-radius: var(--border-radius-medium);
-    color: var(--color-gray-500);
+  padding: 2rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: var(--color-gold-100);
+  border-radius: var(--border-radius-medium);
+  color: var(--color-gray-500);
 }
 
 #log-or-register button {
-    width: 100%;
-    font-family: inherit;
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 2rem 4rem;
-    border: none;
-    background-color: var(--color-gold-100);
-    cursor: pointer;
-    border-radius: var(--border-radius-medium);
-    text-align: center;
-    justify-content: center;
-    box-shadow: 1px 1px 3px var(--color-gray-300);
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 2rem 4rem;
+  border: none;
+  background-color: var(--color-gold-100);
+  cursor: pointer;
+  border-radius: var(--border-radius-medium);
+  text-align: center;
+  justify-content: center;
+  box-shadow: 1px 1px 3px var(--color-gray-300);
 }
 
 #log-or-register button:hover {
-    background-color: var(--color-gold-200);
+  background-color: var(--color-gold-200);
 }
 
 #log-or-register p:hover {
-    background-color: var(--color-gold-200);
+  background-color: var(--color-gold-200);
 }
 
-#show-login p, #show-register p {
-    box-shadow: 1px 1px 3px var(--color-gray-300);
+#show-login p,
+#show-register p {
+  box-shadow: 1px 1px 3px var(--color-gray-300);
 }
 
-#register-section, #login-section {
-    width: 30%;
-    padding: 2rem 2rem 4rem 2rem;
-    margin: 5rem auto 0 auto;
-    background-color: var(--color-gold-100);
-    border-radius: var(--border-radius-medium);
-    box-shadow: 1px 1px 3px var(--color-gray-300);
+#register-section,
+#login-section {
+  width: 30%;
+  padding: 2rem 2rem 4rem 2rem;
+  margin: 5rem auto 0 auto;
+  background-color: var(--color-gold-100);
+  border-radius: var(--border-radius-medium);
+  box-shadow: 1px 1px 3px var(--color-gray-300);
 }
 
 #register-section ul {
-    padding: 0;
+  padding: 0;
 }
 
 #login-section ul {
-    padding: 0;
+  padding: 0;
 }
 
 .is-invisible {
-    display: none;
+  display: none;
 }
 
 .is-visible {
-    display: block;
+  display: block;
 }
 
 .list-element {
-    display: flex;
-    flex-direction: column;
-    width: 15rem;
-    margin: 1rem auto;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  margin: 1rem auto;
+  text-align: center;
 }
 
 .list-element label {
-    font-weight: lighter;
-    margin: 0.25rem 0;
+  font-weight: lighter;
+  margin: 0.25rem 0;
 }
 
 .list-element input {
-    border-radius: var(--border-radius-small);
-    border-color: var(--color-white-100);
+  border-radius: var(--border-radius-small);
+  border-color: var(--color-white-100);
 }
 
 .list-element input:focus {
-    border-color: var(--color-white-200);
-    outline: none;
+  border-color: var(--color-white-200);
+  outline: none;
 }
 
 .buttons {
-    width: 60%;
-    margin: 2rem auto 0 auto;
-    display: flex;
-    justify-content: space-between;
+  width: 60%;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .buttons button {
-    font-family: inherit;
-    font-weight: bold;
-    font-size: 1rem;
-    width: 7.5rem;
-    padding: 0.5rem 1.5rem;
-    border: none;
-    background-color: var(--color-white-100);
-    cursor: pointer;
-    border-radius: var(--border-radius-medium);
-    text-align: center;
-    justify-content: center;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 7.5rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background-color: var(--color-white-100);
+  cursor: pointer;
+  border-radius: var(--border-radius-medium);
+  text-align: center;
+  justify-content: center;
 }
 
 .buttons button:hover {
-    background-color: var(--color-white-200);
+  background-color: var(--color-white-200);
 }
 
 #cart {
-    width: 30%;
-    margin: 3rem auto;
-    padding: 1rem 2rem;
-    border-radius: var(--border-radius-medium);
-    background-color: var(--color-white-200);
+  width: 30%;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white-200);
 }
 
 #cart-emptyinfo {
-    text-align: center;
-    margin: 3rem auto;
-    color: var(--color-gray-500);
-    font-size: 1.25rem;
+  text-align: center;
+  margin: 3rem auto;
+  color: var(--color-gray-500);
+  font-size: 1.25rem;
 }
 
 #cart-title {
-    text-align: center;
-    font-size: 1.75rem;
+  text-align: center;
+  font-size: 1.75rem;
 }
 
 #cart-price {
-    text-align: center;
-    font-weight: 700;
+  text-align: center;
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 48rem) {
-    .background-img {
-        height: 125%;
-        width: 100%;
-        object-fit: cover;
-    }
-    #log-or-register {
-        width: 70%;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 5rem auto;
-    }
+  .background-img {
+    height: 125%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #log-or-register {
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5rem auto;
+  }
 
-    #log-or-register p {
-        display: block;
-        margin: 1rem 0;
-        text-align: center;
-        padding: 1.5rem 4rem;
-    }
+  #log-or-register p {
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+    padding: 1.5rem 4rem;
+  }
 
-    #background-img {
-        height: 100%;
-        object-fit: cover;
-    }
+  #background-img {
+    height: 100%;
+    object-fit: cover;
+  }
 
-    #login-section, #register-section {
-        padding: 1rem 1rem 2rem 1rem;
-        width: 60%;
-        margin-bottom: 2rem;
-    }
+  #login-section,
+  #register-section {
+    padding: 1rem 1rem 2rem 1rem;
+    width: 60%;
+    margin-bottom: 2rem;
+  }
 
-    .list-element {
-        width: 80%;
-        justify-content: center;
-        margin: 0 auto;
-    }
+  .list-element {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+  }
 
-    .buttons {
-        width: 80%;
-        margin-top: 1rem;
-    }
+  .buttons {
+    width: 80%;
+    margin-top: 1rem;
+  }
 
-    .buttons button {
-        padding: 0.5rem 0.25rem;
-        font-size: 0.75rem;
-        width: 5rem;
-    }
+  .buttons button {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.75rem;
+    width: 5rem;
+  }
 
-    #warning-login, #warning-signup {
-        width: 70%;
-    }
+  #warning-login,
+  #warning-signup {
+    width: 70%;
+  }
 
-    #cart {
-        width: 70%;
-    }
+  #cart {
+    width: 70%;
+  }
+
+  input {
+    height: 1.5rem;
+  }
 }
