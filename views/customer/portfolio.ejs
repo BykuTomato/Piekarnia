@@ -14,11 +14,15 @@
             <% for(const product of allProducts) { %>
                 <li>
                     <h2 class="product-title"><%= product.title %></h2>
-                    <img class="product-image" src="<%= product.photoUrl %>" alt="<%= product.title %>">
+                    <p class="product-image-p">
+                        <img class="product-image" src="<%= product.photoUrl %>" alt="<%= product.title %>">
+                    </p>
                     <p class="product-description"><%= product.description %></p>
                     <p class="product-price">Cena: <%= product.price%> zł</p>
                     <% if(locals.isAuth) { %>
-                        <p class="product-cart">Dodaj do koszyka</p>
+                        <button class="product-cart">Dodaj do koszyka</button>
+                    <% } else { %>
+                        <p style="text-align:center; color: var(--color-red-600); font-weight: 700;">Zaloguj się, aby dodać do koszyka.</p>
                     <% } %>
                 </li>
             <% } %>
