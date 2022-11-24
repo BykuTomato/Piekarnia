@@ -1,10 +1,9 @@
 .background-img {
   position: absolute;
   z-index: -1;
-  height: 140%;
+  height: 150%;
   width: 100%;
   object-fit: cover;
-  display: none;
 }
 
 h1 {
@@ -81,7 +80,13 @@ h1 {
   background-color: var(--color-white-200);
 }
 
-@media only screen and (max-width: 48rem) {
+@media only screen and (max-width: 72rem) {
+  #product-list {
+    grid-template-columns: repeat(2, 48%);
+  }
+}
+
+@media only screen and (max-width: 42rem) {
   #product-list {
     display: flex;
     flex-direction: column;

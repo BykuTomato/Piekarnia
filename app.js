@@ -35,7 +35,7 @@ app.use(expressSession(sessionConfig));
 app.use(cookieParser());
 app.use(flash());
 
-app.use(cartMiddleware);
+// app.use(cartMiddleware);
 
 app.use(csrf());
 app.use(addCsrfTokenMiddleware);
