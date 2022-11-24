@@ -6,6 +6,11 @@
   object-fit: cover;
 }
 
+body {
+  background-image: url("../images/background-baking.jpg");
+  background-attachment: fixed;
+}
+
 h1 {
   margin-top: 5rem;
   text-align: center;

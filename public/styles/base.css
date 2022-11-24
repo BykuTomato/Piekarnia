@@ -40,16 +40,25 @@ a {
   text-decoration: none;
 }
 
+nav {
+  top: 0;
+  background-color: white;
+}
+
 #nav-items-small {
+  margin: 0;
+  height: 8rem;
+  background-color: white;
   display: none;
 }
 
 #nav-items {
+  height: 8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 70%;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 0;
   font-size: 1.2rem;
   font-weight: 700;
@@ -126,8 +135,10 @@ input::placeholder {
   color: var(--color-red-600);
 }
 
-@media only screen and (max-width: 64rem) {
+@media only screen and (max-width: 72rem) {
   #nav-items {
+    margin: 0;
+    height: 8rem;
     width: 100%;
   }
 }
